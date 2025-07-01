@@ -1,7 +1,18 @@
+import Image from 'next/image'
+import chinaNight from './images/china_night.jpg'
 
 export default function Home() {
   return (
     <div className="items-center sm:items-start justify-items-center min-h-full p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] mt-7">
+      <Image 
+      src = {chinaNight}
+      width = {0}
+      height = {0}
+      sizes="100vw"
+      style={{ width: '50%', height: 'auto' }}
+      alt = "Picture of some chinese city at night with cyberpunk vibe"
+      ></Image>
+      
       <main className="flex flex-col gap-[32px] items-center sm:items-start">
         <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
           My Portfolio
