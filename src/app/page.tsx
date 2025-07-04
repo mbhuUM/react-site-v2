@@ -11,7 +11,8 @@ export default function Home() {
       sizes="100vw"
       style={{ width: '50%', height: 'auto' }}
       alt = "Picture of some chinese city at night with cyberpunk vibe"
-      ></Image>
+      >
+      </Image>
       
       <main className="flex flex-col gap-[32px] items-center sm:items-start">
         <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
@@ -26,7 +27,6 @@ export default function Home() {
               }
           </p>
         </ol>
-
       </main>
     </div>
   );
