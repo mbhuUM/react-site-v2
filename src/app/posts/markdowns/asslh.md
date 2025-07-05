@@ -1,3 +1,8 @@
+---
+title: 'ASSLH'
+publishedAt: '2024-04-08'
+summary: 'A little blurb on an Arm based Spectre meltdown protection'
+---
 
 ## ARM/AARCH64 Strong Speculative Load Hardening
 

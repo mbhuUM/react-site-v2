@@ -1,6 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import { getArticles } from "../utils/utils";
+import { getArticles } from "../../utils/utils";
 const Posts = () => {
     const files = getArticles(); 
     return (
