@@ -1,22 +1,24 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import { getArticles } from "../../utils/utils";
-const Posts = () => {
-    const files = getArticles(); 
-    return (
-    <section>
-        <h1 className=" mt-6 flex flex-wrap items-center justify-center font-semibold text-2xl font-[family-name:var(--font-geist-sans)]">
-            Articles
-        </h1>
-        {files.map((file) => (
-        <article key={file.name} className="mb-10 p-4 border rounded shadow">
-          <h2 className="text-xl font-semibold mb-2">{file.name}</h2>
-          <ReactMarkdown>{file.content}</ReactMarkdown>
-        </article>
-      ))}
-    </section>
-    )
-};
+import { getArticleBySlug, getArticles } from "../../utils/utils";
+
+export async function generateStaticParams() {
+  const articles = getArticles();
+
+  return articles.map((article) => ({
+    slug: article.slug,
+  }));
+}
 
 
-export default Posts;
+export default async function PostPage({ params }: { params: { slug: string } }) {
+  const article = getArticleBySlug(params.slug);
+
+  return (
+    <article className="p-6 prose max-w-none">
+      <h1>{article.title}</h1>
+      <p className="text-sm text-gray-500">{article.publishedAt}</p>
+      <ReactMarkdown>{article.content}</ReactMarkdown>
+    </article>
+  );
+}
