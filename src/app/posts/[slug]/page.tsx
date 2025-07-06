@@ -11,7 +11,8 @@ export function generateStaticParams() {
 
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const article = await getArticleBySlug(params.slug);
+  const temp = await params; //There's no way that this fixes the error message 
+  const article = await getArticleBySlug(temp.slug);
 
   return (
     <article className="p-6 prose max-w-none">
