@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
-import { getArticleBySlug, getArticles } from "../utils/utils";
+import { getArticles } from "../utils/utils";
+import Link from "next/link";
 
 
 const Posts = () => {
@@ -13,9 +14,13 @@ const Posts = () => {
         {files.map((file) => (
         <article key={file.slug} className="mb-10 p-4 border rounded shadow">
           <h2 className="text-xl font-semibold mb-2">{file.title}</h2>
-          <p className="text-sm text-gray-500 mb-2">{file.publishedAt}</p>
-          <p className="mb-4 text-gray-700">{file.summary}</p>
-          <ReactMarkdown>{file.content}</ReactMarkdown>
+          <p className="text-sm mb-2">{file.publishedAt}</p>
+          <p className="mb-4">{file.summary}</p>
+          <Link
+          href={"/posts/" + file.slug} 
+          className="underline inline-flex items-center  gap-2 text-inherit no-underline mr-4">
+            Read more
+          </Link>
         </article>
       ))}
     </section>

@@ -6,7 +6,7 @@ summary: 'A little blurb on an Arm based Spectre meltdown protection'
 
 ## ARM/AARCH64 Strong Speculative Load Hardening
 
-<!-- ![](https://github.com/mbhuUM/ArmSSLH/blob/main/logo.png?raw=true) -->
+![](https://github.com/mbhuUM/ArmSSLH/blob/main/logo.png?raw=true)
 
 LLVM already includes mitigations against Spectre v1 variants using Speculative Load Hardening (SLH). However, recent research shows that this is still susceptible to control-flow and data leakage attacks.
 

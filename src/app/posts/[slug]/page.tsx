@@ -1,8 +1,7 @@
-import React from "react";
 import ReactMarkdown from "react-markdown";
 import { getArticleBySlug, getArticles } from "../../utils/utils";
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const articles = getArticles();
 
   return articles.map((article) => ({
@@ -12,7 +11,7 @@ export async function generateStaticParams() {
 
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const article = getArticleBySlug(params.slug);
+  const article = await getArticleBySlug(params.slug);
 
   return (
     <article className="p-6 prose max-w-none">
