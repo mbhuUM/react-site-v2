@@ -1,12 +1,10 @@
 ---
-title: 'ASSLH'
+title: 'ARM/AARCH64 Strong Speculative Load Hardening SLH'
 publishedAt: '2024-04-08'
 summary: 'A little blurb on an Arm based Spectre meltdown mitigation'
 ---
 
-## ARM/AARCH64 Strong Speculative Load Hardening
-
-![](https://github.com/mbhuUM/ArmSSLH/blob/main/logo.png?raw=true)
+<img src="https://github.com/mbhuUM/ArmSSLH/blob/main/logo.png?raw=true" alt="logo" width="500"/>
 
 LLVM already includes mitigations against Spectre v1 variants using Speculative Load Hardening (SLH). However, recent research shows that this is still susceptible to control-flow and data leakage attacks.
 

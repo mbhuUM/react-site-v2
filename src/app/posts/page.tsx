@@ -18,7 +18,7 @@ const Posts = () => {
           <p className="mb-4">{file.summary}</p>
           <Link
           href={"/posts/" + file.slug} 
-          className="underline inline-flex items-center  gap-2 text-inherit no-underline mr-4">
+          className="underline inline-flex items-center gap-2 text-inherit mr-4">
             Read more
           </Link>
         </article>

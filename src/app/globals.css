@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 
 :root {
   --background: #ffffff;
@@ -31,3 +33,4 @@ html, body {
   padding: 0;
 }
 
+h1 { font-size: 18pt; }
