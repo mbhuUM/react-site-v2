@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { getArticles } from "../utils/utils";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ const Posts = () => {
     return (
     <section>
         <h1 className=" mt-6 flex flex-wrap items-center justify-center font-semibold text-2xl font-[family-name:var(--font-geist-sans)]">
-            Articles
+            Posts
         </h1>
         {files.map((file) => (
         <article key={file.slug} className="mb-10 p-4 border rounded shadow">

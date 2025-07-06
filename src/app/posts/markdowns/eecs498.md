@@ -1,7 +1,7 @@
 ---
 title: 'AR/VR Class showcase'
 publishedAt: '2025-05-04'
-summary: 'A showcase of what I learned from my AR and VR class'
+summary: 'A showcase of what I worked on from my AR and VR class'
 ---
 
 ### Drummvr
