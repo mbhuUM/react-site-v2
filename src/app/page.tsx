@@ -1,7 +1,13 @@
 import Image from 'next/image'
 import chinaNight from './images/china_night.jpg'
+// import { useSpring, animated } from '@react-spring/web'
 
 export default function Home() {
+  
+  // const springs = useSpring({
+  //   from: { x: 0 },
+  //   to: { x: 100 },
+  // })
   return (
     <div className="items-center sm:items-start justify-items-center min-h-full p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] mt-7">
       <Image 
