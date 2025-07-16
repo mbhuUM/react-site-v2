@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-import {ReactLenis} from "@/app/utils/lenis"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +26,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <ReactLenis root>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
@@ -39,7 +37,6 @@ export default function RootLayout({
           <Footer />
         </footer>
       </body>
-      </ReactLenis>
     </html>
   );
 }

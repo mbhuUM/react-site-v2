@@ -1,31 +1,15 @@
 'use client'
-import { useSpring, animated } from '@react-spring/web'
+import React, { useRef } from 'react'
+import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
+
 
 export default function MyComponent() {
-  const [springs, api] = useSpring(() => ({
-    from: { x: 0 },
-  }))
- //https://react-spring.dev/docs/concepts/animated-elements
- const handleClick = () => {
-    api.start({
-      from: {
-        x: 0,
-      },
-      to: {
-        x: 100,
-      },
-    })
-  }
+  const parallax = useRef<IParallax>(null!)
   return (
-    <animated.div
-      onClick={handleClick}
-      style={{
-        width: 80,
-        height: 80,
-        background: '#ff6d6d',
-        borderRadius: 8,
-        ...springs,
-      }}
-    />
+      <div style={{ width: '100%', height: '100%' }}>
+              <Parallax ref={parallax} pages={1}>
+                <ParallaxLayer>Page under construction</ParallaxLayer>
+              </Parallax>
+      </div>
   )
 }
