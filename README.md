@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+This project is using node version 20 and version 11.4
+To install dependencies:
+```
+npm install
+```
+
 First, run the development server:
 
 ```bash
